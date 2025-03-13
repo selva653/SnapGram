@@ -36,6 +36,20 @@ class InstagramHomePage extends StatelessWidget {
     'jennifer_lopez',
   ];
 
+  // List of profile image assets
+  final List<String> profileImages = [
+    'assets/profile_images/profile1.jpg',
+    'assets/profile_images/profile2.jpg',
+    'assets/profile_images/profile3.jpg',
+  ];
+
+  // List of post image assets
+  final List<String> postImages = [
+    'assets/post_images/post1.jpg',
+    'assets/post_images/post2.jpg',
+    'assets/post_images/post3.jpg',
+  ];
+
   // Random number generator
   final Random _random = Random();
 
@@ -44,22 +58,34 @@ class InstagramHomePage extends StatelessWidget {
     return usernames[_random.nextInt(usernames.length)];
   }
 
+  // Function to get a random profile image
+  String getRandomProfileImage() {
+    return profileImages[_random.nextInt(profileImages.length)];
+  }
+
+  // Function to get a random post image
+  String getRandomPostImage() {
+    return postImages[_random.nextInt(postImages.length)];
+  }
+
   // Dummy data for posts
   final List<Map<String, String>> posts = List.generate(
     10,
     (index) => {
       'username': 'user$index', // Placeholder, will be replaced
-      'profileImage': 'https://via.placeholder.com/150',
-      'postImage': Image.asset('assets/h5.jpg'),
+      'profileImage': 'assets/profile_images/profile1.jpg', // Placeholder
+      'postImage': 'assets/post_images/post1.jpg', // Placeholder
       'caption': 'This is post #$index',
     },
   );
 
   @override
   Widget build(BuildContext context) {
-    // Assign random usernames to posts
+    // Assign random usernames and images to posts
     for (var post in posts) {
       post['username'] = getRandomUsername();
+      post['profileImage'] = getRandomProfileImage();
+      post['postImage'] = getRandomPostImage();
     }
 
     return Scaffold(
@@ -155,7 +181,8 @@ class PostCard extends StatelessWidget {
           BoxShadow(
             color: Colors.black12,
             blurRadius: 6,
-            offset: Offset(0, 2),)
+            offset: Offset(0, 2),
+          ),
         ],
       ),
       child: Column(
@@ -167,7 +194,7 @@ class PostCard extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundImage: NetworkImage(profileImage),
+                  backgroundImage: AssetImage(profileImage),
                   radius: 20,
                 ),
                 SizedBox(width: 10),
@@ -189,7 +216,7 @@ class PostCard extends StatelessWidget {
           // Post image
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.network(
+            child: Image.asset(
               postImage,
               width: double.infinity,
               height: 300,
