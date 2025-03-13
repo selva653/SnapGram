@@ -24,30 +24,30 @@ class InstagramCloneApp extends StatelessWidget {
 class InstagramHomePage extends StatelessWidget {
   // List of predefined usernames
   final List<String> usernames = [
-    'alice_wonder',
-    'bob_marley',
-    'charlie_chaplin',
-    'diana_ross',
-    'elon_musk',
-    'fiona_apple',
-    'george_clooney',
-    'harry_potter',
-    'isaac_newton',
-    'jennifer_lopez',
+    'Ana_De_Armas',
+    'Muthusamy',
+    'Kumaravel_Astheticxxx',
+    'Fazil_xx',
+    'Daizy_girl',
+    'Mr_killer_Subash',
+    'Bloody_Sweet_Shakthi',
+    'Super_star_Santhosh',
+    'Black_Star_Arun',
+    'Mighty_Rajuuuu',
   ];
 
   // List of profile image assets
   final List<String> profileImages = [
-    'assets/profile_images/profile1.jpg',
-    'assets/profile_images/profile2.jpg',
-    'assets/profile_images/profile3.jpg',
+    'assets/profile_images/ex5.png',
+    'assets/profile_images/ex7.png',
+    //'assets/profile_images/profile3.jpg',
   ];
 
   // List of post image assets
   final List<String> postImages = [
-    'assets/post_images/post1.jpg',
-    'assets/post_images/post2.jpg',
-    'assets/post_images/post3.jpg',
+    'assets/post_images/ex2.png',
+    'assets/post_images/ex4.png',
+    'assets/post_images/ex7.png',
   ];
 
   // Random number generator

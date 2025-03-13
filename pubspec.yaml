@@ -18,4 +18,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/h5.jpg
+    - assets/profile_images/
+    - assets/post_images/ex7.png
+    - assets/post_images/ex2.png
+    - assets/post_images/ex4.png
