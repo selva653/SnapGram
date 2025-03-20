@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math'; // For random number generation
+import 'package:snapgram/pages/myprofile.dart';
 
 void main() {
   runApp(InstagramCloneApp());
@@ -9,7 +10,7 @@ class InstagramCloneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Instagram Clone',
+      title: 'Snapgram',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -32,7 +33,7 @@ class InstagramHomePage extends StatelessWidget {
     'Mr_killer_Subash',
     'Bloody_Sweet_Shakthi',
     'Super_star_Santhosh',
-    'Black_Star_Arun',
+    'Black_boy',
     'Mighty_Rajuuuu',
   ];
 
@@ -91,7 +92,7 @@ class InstagramHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Instagram',
+          'Snapgram',
           style: TextStyle(
             fontFamily: 'Billabong',
             fontSize: 32,
@@ -149,7 +150,10 @@ class InstagramHomePage extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person, size: 28),
+          
             label: 'Profile',
+            
+            
           ),
         ],
       ),
