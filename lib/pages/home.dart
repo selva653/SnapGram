@@ -25,15 +25,15 @@ class InstagramCloneApp extends StatelessWidget {
 class InstagramHomePage extends StatelessWidget {
   // List of predefined usernames
   final List<String> usernames = [
-    'Ana_De_Armas',
-    'Muthusamy',
-    'Kumaravel_Astheticxxx',
-    'Fazil_xx',
-    'Daizy_girl',
+    'kevin_kani_durai',
+    'A2d_Ganesha',
+    'kbd_suthan',
+    'Hii_Soldiers',
+    'Priya_Sweety',
     'Mr_killer_Subash',
     'Bloody_Sweet_Shakthi',
     'Super_star_Santhosh',
-    'Black_boy',
+    'Black_Star_Arun',
     'Mighty_Rajuuuu',
   ];
 
@@ -92,7 +92,7 @@ class InstagramHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Snapgram',
+          'Instagram',
           style: TextStyle(
             fontFamily: 'Billabong',
             fontSize: 32,
